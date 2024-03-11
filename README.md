@@ -7,12 +7,15 @@ NINJAL 日本語歴史コーパスのキー列の内容を、ページ番号列�
 # 使用方法
 
 1. [中納言 CHJ](https://chunagon.ninjal.ac.jp/chj/search)より、下記の検索条件で検索結果をダウンロード。
-2. DLしたcsvファイルの名前を作品名に変更。
+2. (作品名).csvにして任意のディレクトリに保存。
 3. csvファイルと同じディレクトリ内に outputs フォルダを作成。
-4. csvファイルのシートの名前を original に変更。
-5. Excelの開発タブからVisual Basicを開き.basファイルをインポート
-6. 実行
-7. outputsフォルダ内に、データ整形後のcsvが生成されていれば完了。
+4. csvファイルをExcelで開く。
+5. csvファイルのシートの名前を original に変更。
+6. Excelの開発タブからVisual Basicを開き.basファイルをインポート
+7. Ctrl+Sで保存の際、「いいえ」を選択して、.xlsmの拡張子で保存
+8. VBAのスクリプトを実行。
+9. Xボタンを押して保存せずにExcelを終了。
+10. outputsフォルダ内に、データ整形後のcsvが生成されていれば完了。
 
 <br>
 
