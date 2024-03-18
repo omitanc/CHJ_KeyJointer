@@ -18,7 +18,7 @@ Sub ConsolidateRowsUniqueValuesAndSaveAsCSV()
     lastRow = srcSheet.Cells(srcSheet.Rows.Count, "A").End(xlUp).Row
     
     ' データ加工ロジック...
-     For i = 2 To lastRow
+    For i = 2 To lastRow
         page_num = srcSheet.Cells(i, "AP").Value
         If Not dict.Exists(page_num) Then
             Set info = CreateObject("Scripting.Dictionary")
@@ -68,8 +68,8 @@ Sub ConsolidateRowsUniqueValuesAndSaveAsCSV()
     ' 元のExcelファイル名（拡張子なし）を取得
     baseFileName = Left(ThisWorkbook.Name, InStrRev(ThisWorkbook.Name, ".") - 1)
     
-    ' CSVファイル名の生成（元のファイル名に "_jointed.csv" を追加）
-    csvFileName = baseFileName & ".csv"
+    ' CSVファイル名の生成（元のファイル名に "_j.csv" を追加）
+    csvFileName = baseFileName & "_j.csv"
     
     ' 出力パスを設定（Excelファイルと同じディレクトリ）
     outputPath = ThisWorkbook.Path & "\outputs\" & csvFileName
